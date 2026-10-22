@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>A Garden For You 🌷</title>
+  <meta name="description" content="An interactive cinematic digital flower garden.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background atmosphere elements -->
+  <div class="sky-atmosphere"></div>
+  <div class="ground-glow"></div>
+
+  <!-- Primary Rendering Canvas -->
+  <canvas id="garden-canvas"></canvas>
+
+  <!-- Interactive Cursor Light -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- UI Overlay Layer -->
+  <main class="ui-overlay">
+    <!-- Opening Intro Message -->
+    <section id="opening-card" class="opening-card" aria-live="polite">
+      <div class="text-glow-wrapper">
+        <p class="pov-text">POV: she wanted flowers, so I coded them <span class="tulip-emoji">🌷</span></p>
+      </div>
+      <div class="opening-sparkle-container"></div>
+    </section>
+
+    <!-- Final Romantic Message -->
+    <section id="final-card" class="final-card hidden" aria-live="polite">
+      <div class="final-text-wrapper">
+        <h1 class="love-title">For you Abhiniti <span class="heart-pulse">❤️</span></h1>
+        <p class="love-subtitle">Made just for you</p>
+      </div>
+      <div class="tap-hint">Tap anywhere to create sparkles & blooms ✨</div>
+    </section>
+  </main>
+
+  <!-- Top Controls (Minimal & Elegant) -->
+  <header class="top-controls">
+    <button id="sound-btn" class="control-btn" title="Toggle Sound Ambience" aria-label="Toggle sound ambience">
+      <svg class="icon sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <line x1="23" y1="9" x2="17" y2="15"></line>
+        <line x1="17" y1="9" x2="23" y2="15"></line>
+      </svg>
+      <svg class="icon sound-on hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+      </svg>
+      <span class="btn-label">Music</span>
+    </button>
+
+    <button id="replay-btn" class="control-btn" title="Replay Bloom Animation" aria-label="Replay garden animation">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19"></path>
+      </svg>
+      <span class="btn-label">Replay</span>
+    </button>
+  </header>
+
+  <script src="script.js"></script>
+</body>
+</html>
